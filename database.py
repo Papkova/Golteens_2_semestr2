@@ -1,10 +1,13 @@
 import sqlite3
 
-connect = sqlite3.connect("app.db")
-print("Connection is successful!")
+connection = sqlite3.connect("app.db")
+print("Database is created successfully")
 
-connect.execute(
-    "CREATE TABLE app_test(question TEXT, ans TEXT, correction TEXT)"
+
+connection.execute(
+    """
+    CREATE TABLE test (question TEXT, answer TEXT, answer2 TEXT, correction TEXT)
+    """
 )
-print("Table is created successful!")
-connect.close()
+print("Table is created successfully")
+connection.close()

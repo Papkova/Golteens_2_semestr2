@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Python is the best lan
+    <form action="{{ url_for('add_record') }}" method="post">
+        <label for="question">Question</label>
+        <input type="text" id="question" name="question"><br>
+
+        <label for="answer">First Answer</label>
+        <input type="text" id="answer" name="answer"><br>
+
+        <label for="answer2">Question</label>
+        <input type="text" id="answer2" name="answer2"><br>
+
+        <label for="correction">Question</label>
+        <input type="text" id="correction" name="correction"><br>
+         <input type="submit" value="Готово">
+    </form>
 {% endblock %}
